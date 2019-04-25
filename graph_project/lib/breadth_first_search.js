@@ -6,7 +6,6 @@ function breadthFirstSearch(startingNode, targetVal, visited = new Set()) {
         if(visited.has(first.val)) continue;
         visited.add(first.val);
         if (first.val === targetVal) return first;
-        // first.neighbors.forEach(neighbor => {queue.push(neighbor)})
         queue.push(...first.neighbors);
     }
    return null;
