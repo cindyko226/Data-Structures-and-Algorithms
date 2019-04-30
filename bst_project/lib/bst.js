@@ -52,13 +52,13 @@ class BST {
    }
 
    searchIter(target, root = this.root){
-       let curr = root;
+       let currentNode = root;
 
-       while(curr){
-           if(target < curr.val){
-               curr = curr.left;
-           }else if(target > curr.val){
-               curr = curr.right;
+       while(currentNode){
+           if(target < currentNode.val){
+               currentNode = currentNode.left;
+           }else if(target > currentNode.val){
+               currentNode = currentNode.right;
            }else{
                return true;
            }
